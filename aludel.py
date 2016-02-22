@@ -17,3 +17,23 @@ print(my_stats['str']['name'])
 #         print('{} - {} ({})'.format(stat['name'], stat['val'], stat['mod']))
 #
 # print_stats(my_stats)
+
+class Ability:
+    def __init__(self):
+        __base = None
+        __mods = []
+
+    def get_value(self):
+        pass
+
+    def get_ability_mod(self):
+        pass
+
+    def set_base_value(self, value, source):
+        self.__base = {'value': value, 'source': source}
+
+    def add_modifier(self, value, name, source):
+        self.__mods.append({'value': value, 'name': name, 'source': source})
+
+
+
