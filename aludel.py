@@ -20,11 +20,16 @@ print(my_stats['str']['name'])
 
 class Ability:
     def __init__(self):
-        __base = None
-        __mods = []
+        self.__base = None
+        self.__mods = []
 
-    def get_value(self):
+    def get_regular_value(self):
         pass
+
+    def get_conditional_values(self):
+        pass
+
+    def has_conditional_mods(self):
 
     def get_ability_mod(self):
         pass
@@ -34,6 +39,14 @@ class Ability:
 
     def add_modifier(self, value, name, source):
         self.__mods.append({'value': value, 'name': name, 'source': source})
+
+class Abilities:
+    def __init__(self, ):
+        pass
+
+
+
+
 
 
 
