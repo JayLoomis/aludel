@@ -18,8 +18,14 @@ print(my_stats['str']['name'])
 #
 # print_stats(my_stats)
 
+standard_ability_list = [('strength', 'str'), ('dexterity', 'dex'),
+                         ('constitution', 'con'), ('intelligence', 'int'),
+                         ('wisdom', 'wis'), ('charisma', 'cha')]
+
 class Ability:
-    def __init__(self):
+    def __init__(self, ability_name, short_name):
+        self.__name = ability_name
+        self.__short_name = short_name
         self.__base = None
         self.__mods = []
 
@@ -41,8 +47,10 @@ class Ability:
         self.__mods.append({'value': value, 'name': name, 'source': source})
 
 class Abilities:
-    def __init__(self, ):
-        pass
+    def __init__(self, ability_list):
+        self.__abilities = []
+        for ability in ability_list:
+            self.__abilities.append(Ability(ability[0], ability[1]))
 
 
 
