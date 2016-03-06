@@ -33,8 +33,11 @@ class Ability:
 
         return False
 
+    @property
     def get_ability_mod(self):
-        pass
+
+        # Can use instead of the big block:
+        return (self.get_regular_value() - 10) // 2
 
     def set_base_value(self, value, source):
         self.__base = {'value': value, 'source': source}
